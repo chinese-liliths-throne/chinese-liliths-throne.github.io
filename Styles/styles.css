@@ -1,0 +1,16 @@
+/* Your regular styles go here */
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode body {
+    background-color: #111;
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #6d44a0;
+}
+
+/* Add more styles as needed */
