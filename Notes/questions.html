@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莉莉丝汉化&amp;PZ平台使用新人常见问题</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #585ac0da; /* 整个页面的背景颜色 */
+            padding: 20px;
+            margin: 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff; /* 特定区域的背景颜色 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content" class="container">
+        <section>
+            <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="PZ_0"></a>莉莉丝汉化&amp;PZ平台使用新人常见问题</h1>
+<blockquote>
+<p class="has-line-data" data-line-start="2" data-line-end="3">注意：部分内容已失效。</p>
+<p class="has-line-data" data-line-start="2" data-line-end="3">本公告为置顶公告“翻译须知”与“汉化大纲指北”的解释与补充，如果您已阅读并理解所有置顶公告/已熟练使用pz平台、翻译辅助工具以及游戏内解析器测试，请略过本公告。</p>
+</blockquote>
+<h1 class="code-line" data-line-start=5 data-line-end=6 ><a id="_5"></a><strong>本公告仅用于收集与解答常见问题，请优先阅读“翻译须知”与“汉化大纲指北”</strong></h1>
+<p class="has-line-data" data-line-start="7" data-line-end="8">包含以下问题的解答：</p>
+<pre><code class="has-line-data" data-line-start="10" data-line-end="23">1. 我不知道需要翻译的内容在哪里。
+2. 我不知道[npc.xxx]之类的东西该怎么处理，那些空格怎么办？
+3. 我看不懂代码。
+4. 什么是翻译建议？在哪里看翻译建议？
+5. 我碰到了好几条很相似的文本，该怎么办？
+6. 我在游戏里碰到了想翻译/想修改的文本，该怎么找？
+7. 我碰到了看不懂的单词，也查不到。
+8. 不确定翻译的东西是否通顺，怎么在游戏里调试？/解析器是什么？如何使用解析器？
+9. 什么是术语？怎么添加术语？
+10. 我想让别人看我正在翻译的词条。
+11. 我希望能按字数排序。
+12. 我想查看自己的历史翻译。
+</code></pre>
+<h2 class="code-line" data-line-start=24 data-line-end=25 ><a id="1__24"></a><strong>1. 查看翻译内容</strong></h2>
+<p class="has-line-data" data-line-start="25" data-line-end="26">项目页面-文件-按翻译进度排序</p>
+<p class="has-line-data" data-line-start="27" data-line-end="28">任务-大段对话/基础场景动作</p>
+<p class="has-line-data" data-line-start="29" data-line-end="30">或者搜索其他任何你感兴趣的内容</p>
+<h2 class="code-line" data-line-start=31 data-line-end=32 ><a id="2__31"></a><strong>2. 处理方括号与空格</strong></h2>
+<p class="has-line-data" data-line-start="32" data-line-end="33">反馈与代码注解查询：<a href="https://docs.qq.com/sheet/DTU1CTnhRWmdOVEZ6?tab=xesy6w">https://docs.qq.com/sheet/DTU1CTnhRWmdOVEZ6?tab=xesy6w</a></p>
+<h3 class="code-line" data-line-start=33 data-line-end=34 ><a id="_33"></a><strong>处理方括号</strong></h3>
+<ul>
+<li class="has-line-data" data-line-start="34" data-line-end="47">注意被[]包裹的内容绝大多数都无需翻译在一定情况下需要进行特殊处理：
+<ul>
+<li class="has-line-data" data-line-start="35" data-line-end="36"><strong>可见上方“反馈与代码注解查询”，如遇到不明确的内容也可以添加等待他人解释</strong></li>
+<li class="has-line-data" data-line-start="36" data-line-end="37"><code>[npc.verb(...)]</code>用于处理人称，可以删除后直接替换，如：[npc.he] [npc.verb(push)] you -&gt; [npc.he]推了你</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38"><code>[npc.is/has/have/do/does/was]</code>等均可以直接删去</li>
+<li class="has-line-data" data-line-start="38" data-line-end="39"><code>[random(...|...|...)]</code>需要翻译括号内被“<code>|</code>”分割的文本</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><code>[npc.speechxxx(...)]</code>需要翻译括号内的内容</li>
+<li class="has-line-data" data-line-start="40" data-line-end="41"><code>[style.xxx(...)]</code>需要翻译括号内的文本</li>
+<li class="has-line-data" data-line-start="41" data-line-end="42"><code>[npc.namePos]</code>——pos指所有格，xxx的</li>
+<li class="has-line-data" data-line-start="42" data-line-end="43"><code>[npc.step/slide/walk/slither]</code>代表移动的动词如“走、滑”等，会根据腿的类型有调整，无须替换，了解意思即可</li>
+<li class="has-line-data" data-line-start="43" data-line-end="44"><code>[npc.he/she/her/his]</code>等人称代词如感觉删除更符合中文语感，可选择删除，但不要使用“他、她、她的”等词语替换</li>
+<li class="has-line-data" data-line-start="44" data-line-end="45"><code>[npc.nameIs/nameHas]</code>等原本会附带is have等，中文请视作“他、她、它”即可</li>
+<li class="has-line-data" data-line-start="45" data-line-end="47">若最后带+或者D，则代表具有名词和副词修饰，如<code>[npc.moan+]</code>即为 淫乱的呻吟 等，若没有修饰词，则会在前面加“那”。推荐在前面使用单独的代词“她/他”或者不是代词，而不是使用“她的/他的”。</li>
+</ul>
+</li>
+</ul>
+<p class="has-line-data" data-line-start="47" data-line-end="48"><strong>特别注意：</strong>[npc.xxx+]形式的方括号不需要在前面额外补充“的”，因为[npc.xxx+]会附带输出形容词。例如：</p>
+<pre><code class="has-line-data" data-line-start="49" data-line-end="52">[npc.namePos][npc.asshole+]-&gt;某人粉色的肛门
+[npc.namePos]的[npc.asshole+]-&gt;某人的粉色的肛门
+</code></pre>
+<p class="has-line-data" data-line-start="52" data-line-end="53">此处按中文语感来说，只需要一个“的”，因此不需要额外添加“的”。</p>
+<h3 class="code-line" data-line-start=54 data-line-end=55 ><a id="_54"></a><strong>处理空格</strong></h3>
+<p class="has-line-data" data-line-start="55" data-line-end="56">无特殊情况需要全部<strong>删去</strong>。例如：</p>
+<pre><code class="has-line-data" data-line-start="57" data-line-end="62">原文：
+&quot; [npc2.Name] [npc2.moansVerb] in delight as [npc2.she] [npc2.verb(feel)] [npc2.her] [npc2.tail(true)] being stimulated, and, seeking to remind [npc.name] who's in charge,&quot;
+译文：
+&quot;[npc2.Name]感觉到自己的[npc2.tail(true)]正被刺激着，忘我地发出愉悦的[npc2.a_moan+]，突然回过神来警告[npc.name]别得意忘形，&quot;
+</code></pre>
+<p class="has-line-data" data-line-start="62" data-line-end="63">如果保留空格，那么输出的中文文本之间就会存在空格。而中文文本在绝大多数情况下是不需要空格的。</p>
+<h2 class="code-line" data-line-start=64 data-line-end=65 ><a id="3__64"></a><strong>3. 莉莉丝常见基础代码处理</strong></h2>
+<h3 class="code-line" data-line-start=65 data-line-end=66 ><a id="_65"></a><strong>字符串拼接</strong></h3>
+<p class="has-line-data" data-line-start="66" data-line-end="67">只需要翻译()内部的英文，注意保持其他符号不变。</p>
+<pre><code class="has-line-data" data-line-start="68" data-line-end="73">原文：
++ &quot; [npc.speech(That look on your face is priceless! Now let's have some fun!)]&quot;);
+译文：
++ &quot;[npc.speech(这副表情算得上无价之宝哦！我们来干点快乐的事吧！)]&quot;);
+</code></pre>
+<h3 class="code-line" data-line-start=73 data-line-end=74 ><a id="_73"></a><strong>三目运算符</strong></h3>
+<p class="has-line-data" data-line-start="74" data-line-end="76">如果没有编程经验/虽然学过但是早就忘干净啦，可以考虑跳过此条。<br>
+其中<code>(increment&gt;1?&quot;&quot;:&quot;&quot;)</code>，可参考<a href="https://c.biancheng.net/view/1363.html">C++ ?:条件运算符(三目运算符)用法详解 (biancheng.net)</a></p>
+<pre><code class="has-line-data" data-line-start="78" data-line-end="83">原文：
++ &quot;[npc.Name] [style.colourGood(gained)] &quot;+UtilText.formatAsEssences(increment, &quot;b&quot;, false)+&quot; &lt;b style='color:&quot;+PresetColour.GENERIC_ARCANE.toWebHexString()+&quot;;'&gt;arcane essence&quot;+(increment&gt;1?&quot;s&quot;:&quot;&quot;)+&quot;&lt;/b&gt;!&quot;
+译文：
++ &quot;[npc.Name][style.colourGood(获得了)]&quot;+UtilText.formatAsEssences(increment, &quot;b&quot;, false)+&quot;&lt;b style='color:&quot;+PresetColour.GENERIC_ARCANE.toWebHexString()+&quot;;'&gt;奥术精华&quot;+(increment&gt;1?&quot;&quot;:&quot;&quot;)+&quot;&lt;/b&gt;！&quot;
+</code></pre>
+<h3 class="code-line" data-line-start=84 data-line-end=85 ><a id="_84"></a><strong>判断语句</strong></h3>
+<p class="has-line-data" data-line-start="86" data-line-end="87"><code>#IF() ... #ELSEIF() ... #ELSE ... #ENDIF</code>   注意括号的位置，由“<code>...</code>”标记的部分需要翻译，无论处于同一行还是另起一行</p>
+<pre><code class="has-line-data" data-line-start="89" data-line-end="102">原文：
+Clearly having been expecting you, this otter-girl throws a folder down onto the coffee table nearest to you, and out spill dozens of papers
+        #IF(game.isSillyMode())
+             and lurid pictures
+        #ENDIF
+         detailing your exploits in Dominion, Submission, and now Elis. On the front of this folder are printed the words 'ORICL: Top Secret', letting you know that these Enforcers clearly have some important contacts back in Dominion, as well as that your exploits haven't gone unnoticed.
+译文：
+这位水獭女显然在等你，她把文件夹扔到离你最近的茶几上，几十份文件
+        #IF(game.isSillyMode())
+            和色图
+        #ENDIF
+        飞了出来 ，详细记录了你在御城区、屈城区和现在在伊利斯的事迹。文件夹的正面印着“ORICL：绝密”的字样，让你知道这些执法者显然在御城区有重要的关系，也让你知道你的所作所为没有被忽视。
+</code></pre>
+<p class="has-line-data" data-line-start="103" data-line-end="104">此处如果是sillymode，则会输出<code>几十份文件和色图飞了出来 ，详细记录了你在御城区、屈城区和现在在伊利斯的事迹。</code></p>
+<p class="has-line-data" data-line-start="105" data-line-end="106">如果不是sillymode，则会输出<code>几十份文件飞了出来 ，详细记录了你在御城区、屈城区和现在在伊利斯的事迹。</code></p>
+<p class="has-line-data" data-line-start="107" data-line-end="108">翻译时需注意文字拼接是否合理。</p>
+<h2 class="code-line" data-line-start=109 data-line-end=110 ><a id="4__109"></a><strong>4. 查看翻译建议</strong></h2>
+<p class="has-line-data" data-line-start="110" data-line-end="112">电脑端：下拉词条页面即可看到翻译建议。使用旁边的“搜索历史翻译”可以搜到其他人对某段文本的翻译（如果有的话）。如果没有对应文本，则会弹出报错，删掉搜索框中的文字即可解决。<br>
+手机端：下拉词条页面，点击“建议-查看翻译建议”即可。也可以使用“搜索历史翻译”，与电脑端相同。</p>
+<h2 class="code-line" data-line-start=113 data-line-end=114 ><a id="5__113"></a><strong>5. 处理相似文本</strong></h2>
+<p class="has-line-data" data-line-start="114" data-line-end="119">推荐使用<br>
+<a href="https://instantdiff.com/">https://instantdiff.com/</a><br>
+或<br>
+<a href="https://diff.buyaocha.com/">https://diff.buyaocha.com/</a><br>
+对比英文文本。</p>
+<p class="has-line-data" data-line-start="120" data-line-end="121">根据对比出的差分修改对应的译文，保存提交即可。如果感觉有需要润色的地方，可以顺便给历史翻译也润色一下。</p>
+<h2 class="code-line" data-line-start=122 data-line-end=123 ><a id="6__122"></a><strong>6. 搜索游戏文本</strong></h2>
+<p class="has-line-data" data-line-start="123" data-line-end="129">在项目界面的左侧搜索栏直接搜索即可。搜索后，在左侧两个箭头那里可以修改搜索范围（原文/译文/键值），右侧的漏斗可以按状态筛选词条（已翻译、有疑问、由xxx修改等）。<br>
+如果搜索出的词条较多，而需要找的词条较短，推荐在网址后加上&amp;orderBy=words，可以按词条词数排序。例如：<br>
+搜索critical： <a href="https://paratranz.cn/projects/8288/strings?text=critical">https://paratranz.cn/projects/8288/strings?text=critical</a><br>
+搜索critical并按字数降序排序：<a href="https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=-words">https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=-words</a><br>
+搜索critical并按字数升序排序：<a href="https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=words">https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=words</a><br>
+点进去看词条的顺序就可以理解啦。</p>
+<h2 class="code-line" data-line-start=130 data-line-end=131 ><a id="7__130"></a><strong>7. 搜索特殊词汇</strong></h2>
+<h3 class="code-line" data-line-start=131 data-line-end=132 ><a id="_131"></a><strong>术语</strong></h3>
+<p class="has-line-data" data-line-start="132" data-line-end="134">如果原文中存在双下划线，那么该词汇为术语。点击该单词，对应的译文会出现在文本框里。<br>
+有时候可能会因为词汇和术语稍微出入，而没有术语提示。需要去项目界面-术语的搜索栏中搜索，看看有没有对应的术语。</p>
+<h3 class="code-line" data-line-start=134 data-line-end=135 ><a id="_134"></a><strong>翻译建议</strong></h3>
+<p class="has-line-data" data-line-start="135" data-line-end="136">在翻译建议旁边的“搜索历史翻译”里输入不确定的单词，或许可以找到其他人的翻译。</p>
+<h3 class="code-line" data-line-start=136 data-line-end=137 ><a id="_136"></a><strong>搜索</strong></h3>
+<p class="has-line-data" data-line-start="137" data-line-end="139">询问ai：<a href="https://chat.openai.com/">https://chat.openai.com/</a><br>
+俚语词典：<a href="https://www.urbandictionary.com/">https://www.urbandictionary.com/</a></p>
+<h3 class="code-line" data-line-start=139 data-line-end=140 ><a id="_139"></a><strong>提问</strong></h3>
+<p class="has-line-data" data-line-start="140" data-line-end="141">如果不确定，请在群里提问。请不要“虽然不确定但是随便编一个上去吧”，然后点击提交。如果一定要提交，请把词条标记为“有疑问”，方便其他人查看和修改。</p>
+<h2 class="code-line" data-line-start=142 data-line-end=143 ><a id="8__142"></a><strong>8. 使用解析器</strong></h2>
+<p class="has-line-data" data-line-start="143" data-line-end="148">启动游戏，进入游戏界面，（注意，是已经建立角色后的游戏界面，不是刚进入的界面。）在非战斗和非那种战斗的场景下，使用英文输入法，键盘依次按下b-u-g-g-y，即可看到作弊界面。<br>
+场景里最好有一到两个npc，推荐去实验室测试，正好有两个npc。<br>
+点击页面左下角的“解析器”，在文本框中输入要测试的内容，点击“解析”，即可看到游戏内呈现出的文本形式。（其中的“xml路径”在一般情况下不需要管，空着就行。）<br>
+适用于检查文本是否通顺。（特别是sex部分的文本）<br>
+**特别注意：**解析器解析后，会把<code>&quot;</code>自动改为<code>'</code>，所以如果需要修改，请尽量在pz的文本框内改好，在解析器里解析。而不是在解析器内修改，把修改后的文本粘贴回pz。</p>
+<h2 class="code-line" data-line-start=149 data-line-end=150 ><a id="9__149"></a><strong>9. 术语</strong></h2>
+<p class="has-line-data" data-line-start="150" data-line-end="152">原文中有双下划线的词即为术语。翻译时，要求术语的翻译形式尽量统一。点击术语，对应的译文会出现在文本框里。<br>
+点击项目页面-术语即可看到所有术语，可以在搜索框内搜索术语。</p>
+<h2 class="code-line" data-line-start=153 data-line-end=154 ><a id="10__153"></a><strong>10. 词条传送门</strong></h2>
+<p class="has-line-data" data-line-start="154" data-line-end="156">点击文本框右下角的“复制链接”，粘贴给别人即可。<br>
+注意：如果是在某列表编辑，请不要复制地址栏里的内容，这样别人只能看见列表。</p>
+<pre><code class="has-line-data" data-line-start="157" data-line-end="164">例如，我想查看res/clothing/c4mg1rl/benevolent/mitsugake.json的倒数第三条：
+
+[npc.Name] [npc.verb(pull)] the mitsugake off of [npc2.namePos] [npc2.hand] after unwrapping the wrist strap.
+
+正确的：https://paratranz.cn/projects/8288/strings?id=356816186
+错误的：https://paratranz.cn/projects/8288/strings?file=1088575
+</code></pre>
+<h2 class="code-line" data-line-start=165 data-line-end=166 ><a id="11_orderBy_165"></a><strong>11. orderBy</strong></h2>
+<p class="has-line-data" data-line-start="166" data-line-end="170">在网址后加上&amp;orderBy=key，使得词条以key的顺序排序，可以更容易找到上下文；若改为&amp;orderBy=words，则可以词条词数排序。如：<br>
+搜索critical： <a href="https://paratranz.cn/projects/8288/strings?text=critical">https://paratranz.cn/projects/8288/strings?text=critical</a><br>
+搜索critical并按字数降序排序：<a href="https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=-words">https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=-words</a><br>
+搜索critical并按字数升序排序：<a href="https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=words">https://paratranz.cn/projects/8288/strings?text=critical&amp;orderBy=words</a></p>
+<p class="has-line-data" data-line-start="171" data-line-end="174">据此原理，可以做出两个特殊的网址：<br>
+长文本传送门：<a href="https://paratranz.cn/projects/8288/strings?orderBy=-words&amp;stage=0&amp;page=1&amp;pageSize=800">https://paratranz.cn/projects/8288/strings?orderBy=-words&amp;stage=0&amp;page=1&amp;pageSize=800</a><br>
+刷词条数战神：<a href="https://paratranz.cn/projects/8288/strings?orderBy=words&amp;stage=0&amp;page=1&amp;pageSize=800">https://paratranz.cn/projects/8288/strings?orderBy=words&amp;stage=0&amp;page=1&amp;pageSize=800</a></p>
+<h2 class="code-line" data-line-start=175 data-line-end=176 ><a id="12__175"></a><strong>12. 查看历史翻译</strong></h2>
+<p class="has-line-data" data-line-start="176" data-line-end="178">点击“历史记录”或点击页面右上角自己的头像-翻译旁边的蓝色数字，即可查看自己的历史翻译。<br>
+手机端：点击左上角三条横线-自己的头像-翻译旁边的蓝色数字。</p>
+            <div id="markdown-content">
+                
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

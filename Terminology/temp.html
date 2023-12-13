@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Display</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>术语表</h2>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Part of Speech</th>
+                <th>UID</th>
+                <th>Term</th>
+                <th>Translation</th>
+                <th>Note</th>
+                <th>Project</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        // Fetch JSON data from the file
+        fetch('terms-8288.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                // Populate table with JSON data
+                var tableBody = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+
+                jsonData.forEach(function (item) {
+                    var row = tableBody.insertRow(tableBody.rows.length);
+
+                    // Add cells based on your JSON structure
+                    var cell1 = row.insertCell(0);
+                    cell1.innerHTML = item.id;
+
+                    var cell2 = row.insertCell(1);
+                    cell2.innerHTML = item.createdAt;
+
+                    var cell3 = row.insertCell(2);
+                    cell3.innerHTML = item.updatedAt;
+
+                    var cell4 = row.insertCell(3);
+                    cell4.innerHTML = item.pos;
+
+                    var cell5 = row.insertCell(4);
+                    cell5.innerHTML = item.uid;
+
+                    var cell6 = row.insertCell(5);
+                    cell6.innerHTML = item.term;
+
+                    var cell7 = row.insertCell(6);
+                    cell7.innerHTML = item.translation;
+
+                    var cell8 = row.insertCell(7);
+                    cell8.innerHTML = item.note;
+
+                    var cell9 = row.insertCell(8);
+                    cell9.innerHTML = item.project;
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+</body>
+
+</html>
