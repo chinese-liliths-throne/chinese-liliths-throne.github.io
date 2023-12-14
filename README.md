@@ -1,3 +1,5 @@
-# miyakoAki4828.github.io
-莉莉丝的王座（Lilith's Throne）汉化介绍页。
-[访问地址](https://chinese-liliths-throne.github.io/)
+# 种植园汉化组介绍页
+
+莉莉丝的王座（Lilith's Throne）与 Degrees of Lewdity 汉化发布导航及公告。
+
+[点我访问](https://chinese-liliths-throne.github.io/)
