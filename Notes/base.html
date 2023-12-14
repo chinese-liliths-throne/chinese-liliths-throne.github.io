@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本翻译指南（发布者：COUNTC）</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #6b5fd4da; /* 整个页面的背景颜色 */
+            padding: 20px;
+            margin: 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff; /* 特定区域的背景颜色 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .image-zoom {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px; /* 设置最大宽度，根据需要调整 */
+            margin: 0 auto; /* 居中显示 */
+        }
+
+        /* 定义图片的样式 */
+        .image-zoom img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+
+        /* 缩放框激活时的样式 */
+        .image-zoom:hover img {
+            transform: scale(1.0); /* 放大图片 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content" class="container">
+        <section>
+            <div id="markdown-content">
+                <div class="image-zoom">
+                    <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_0"></a>基本翻译指南（发布者：COUNTC）</h1>
+                    <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_0"></a>常用链接导航</h1>
+                    <ol>
+                    <li class="has-line-data" data-line-start="1" data-line-end="8">官方链接
+                    <ul>
+                    <li class="has-line-data" data-line-start="2" data-line-end="3"><a href="https://vrelnir.blogspot.com/">作者博客</a></li>
+                    <li class="has-line-data" data-line-start="3" data-line-end="4"><a href="https://degreesoflewdity.miraheze.org/wiki/">游戏 Wiki</a></li>
+                    <li class="has-line-data" data-line-start="4" data-line-end="5"><a href="https://degreesoflewditycn.miraheze.org/wiki/">中文维基</a></li>
+                    <li class="has-line-data" data-line-start="5" data-line-end="6"><a href="https://gitgud.io/Vrelnir/degrees-of-lewdity/-/tree/master/">源码仓库 (Gitgud)</a></li>
+                    <li class="has-line-data" data-line-start="6" data-line-end="7"><a href="https://dolmods.net/">模组发布网址</a></li>
+                    <li class="has-line-data" data-line-start="7" data-line-end="8"><a href="https://github.com/Eltirosto/Degrees-of-Lewdity-Chinese-Localization">汉化发布仓库</a></li>
+                    </ul>
+                    </li>
+                    <li class="has-line-data" data-line-start="8" data-line-end="12">翻译软件
+                    <ul>
+                    <li class="has-line-data" data-line-start="9" data-line-end="10"><a href="https://www.deepl.com/translator">DeepL 翻译</a></li>
+                    <li class="has-line-data" data-line-start="10" data-line-end="11"><a href="https://fanyi.baidu.com/">百度翻译</a></li>
+                    <li class="has-line-data" data-line-start="11" data-line-end="12"><a href="https://www.dictionary.com/">俚语词典</a></li>
+                    </ul>
+                    </li>
+                    <li class="has-line-data" data-line-start="12" data-line-end="16">代码相关
+                    <ul>
+                    <li class="has-line-data" data-line-start="13" data-line-end="14"><a href="https://www.motoslave.net/sugarcube/2/docs">SugarCube2 语法文档</a></li>
+                    <li class="has-line-data" data-line-start="14" data-line-end="15"><a href="https://github.com/NumberSir/DOL-Mod-Intepreted-Helper">模组编写助手</a></li>
+                    <li class="has-line-data" data-line-start="15" data-line-end="16"><a href="https://github.com/NumberSir/vrelnir_localization">汉化版编译脚本</a></li>
+                    </ul>
+                    </li>
+                    <li class="has-line-data" data-line-start="16" data-line-end="20">其它
+                    <ul>
+                    <li class="has-line-data" data-line-start="17" data-line-end="18"><a href="https://tieba.baidu.com/f?kw=dol">贴吧</a></li>
+                    <li class="has-line-data" data-line-start="18" data-line-end="20"><a href="https://kitsune.ee/forum.php?mod=forumdisplay&amp;fid=63">神社</a></li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h1 class="code-line" data-line-start=20 data-line-end=21 ><a id="ParaTranz_20"></a>ParaTranz基本界面说明：</h1>
+                    <p class="has-line-data" data-line-start="21" data-line-end="22"><img src="../Source/imgBase/01基本界面.jpg" alt="基本界面"></p>
+                    <p class="has-line-data" data-line-start="23" data-line-end="25">本游戏基于 <a href="https://twinery.org/">Twine</a> 引擎，文本格式为 <a href="https://www.motoslave.net/sugarcube/2/docs">SugarCube2</a> 格式，游戏文本中夹杂着大量的代码引用，变量，函数，判断语句占位符等内容。下面将会对常见的此类文本进行总结，如果你还是对某条塞满代码引用的文本困惑不已的话，不妨利用键值去检查一下源码中的上下文。对于实在无法理解的文本或出现未知的引用，请将之标记为有疑问。有能力或有编程基础的可以自行在 SugarCube2 官方文档中检查对应的语法格式。<br>
+                    （注意：版本更替后，原有的键值可能会出现偏差，此时请自行利用文本编辑器的搜索功能。）</p>
+                    <ol>
+                    <li class="has-line-data" data-line-start="26" data-line-end="30">
+                    <p class="has-line-data" data-line-start="26" data-line-end="29">由 “&lt; !–”,&quot;–&gt;&quot; 或&quot;/<em>“,”</em>/&quot;标记的文本<br>
+                    <img src="../Source/imgBase/02文本1.png" alt=""><br>
+                    注释类文本，保留原文即可，无需翻译</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="30" data-line-end="33">
+                    <p class="has-line-data" data-line-start="30" data-line-end="32">由&quot;&lt;&quot;,&quot;&gt;&quot;单括号标记的引用<br>
+                    以功能性代码为主，单括号内的内容均需保留原文并保持其在文本中的位置和顺序</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="33" data-line-end="55">
+                    <p class="has-line-data" data-line-start="33" data-line-end="36">由&quot;&lt;&lt;&quot;,&quot;&gt;&gt;&quot;双单括号标记的引用<br>
+                    最常见的引用，除以下两种情况外，双括号内的内容均需保留原文并保持其在文本中的位置和顺序<br>
+                    注意：通过点击原文拷贝到下方的时候，末尾会少一个&gt;，需要手动添加，切记。</p>
+                    <p class="has-line-data" data-line-start="37" data-line-end="40">** 例外一：选项文本  **<br>
+                    <img src="../Source/imgBase/03文本2.jpg" alt=""><br>
+                    存在上图所示三种变种，需翻译从&quot;[[“开始，”|“或”-&gt;“结束间的内容，若无”|“或”-&gt;&quot;，则在原文前手动添加&quot;|“号并在”|&quot;前进行翻译。</p>
+                    <p class="has-line-data" data-line-start="41" data-line-end="50">** 例外二：人称代词 **<br>
+                    <img src="../Source/imgBase/04文本3.png" alt=""><br>
+                    包括&lt;&lt;he&gt;&gt;,&lt;&lt;His&gt;&gt;,&lt;&lt;their&gt;&gt;等，需保证&lt;&lt;&gt;&gt;内结构完整并在翻译文本中保持相应位置<br>
+                    由于英语中存在大小写，宾格，所有格等变形，因此此类代词存在大量差分，在此一并统一其意义：<br>
+                    &lt;&lt;He&gt;&gt;,&lt;&lt;his&gt;&gt;,&lt;&lt;bhis&gt;&gt;,&lt;&lt;pHer&gt;&gt;及其所有变形：均会根据性别自动输出为&quot;他/她/它&quot;，请根据语境自行添加&quot;的&quot;,“是&quot;等助词<br>
+                    &lt;&lt;youself&gt;&gt;,&lt;&lt;himself&gt;&gt;及所有变形：“你自己/他自己”,后面不需再加&quot;自己”。<br>
+                    &lt;&lt;thier&gt;&gt;,&lt;&lt;them&gt;&gt;及所有变形：“他们/它们”,有时they指代性别不明的单人，自行判断。<br>
+                    &lt;&lt;people&gt;&gt;,&lt;&lt;peopley&gt;&gt;,&lt;&lt;group&gt;&gt;：男人/女人/男孩/女孩（复数），同上<br>
+                    &lt;&lt;persony&gt;&gt;：男人/女人/男孩/女孩（单数）</p>
+                    <p class="has-line-data" data-line-start="51" data-line-end="52">请根据具体语境自由调整，增添这些代词</p>
+                    <p class="has-line-data" data-line-start="53" data-line-end="54">对于人称代词以外的例如&lt;&lt;genitals&gt;&gt;,&lt;&lt;lewdness&gt;&gt;等占位符，也需在译文中为其留出相应空位。它们的意义将在之后上传至术语表中，你也可以通过查阅&quot;degrees-of-lewdity-master\game\base-system&quot;下的&quot;text.twee&quot;来获取相关信息</p>
+                    </li>
+                    <li class="has-line-data" data-line-start="55" data-line-end="60">
+                    <p class="has-line-data" data-line-start="55" data-line-end="60">被&quot;$&quot;,&quot;_&quot;,&quot;.“等标记的引用<br>
+                    <img src="../Source/imgBase/05文本4.png" alt=""><br>
+                    <img src="../Source/imgBase/06文本5.png" alt=""><br>
+                    主要为变量，特征是由”$&quot;开头/被下划线或英文句号分割的小写单词。用来指代一个非固定的短语或句子。不要汉化。<br>
+                    注意!!:如图所示，一般其前后的空格需要删除，以保持句子连贯。但若是两个变量紧挨着，请在中间添加空格或汉字隔开。</p>
+                    </li>
+                    </ol>
+                </div>  
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
